@@ -6,6 +6,7 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Sean</Authors>
     <Company>Sean Studio</Company>
+    <Description>CefSharp.WinForms</Description>
     <Version>1.0.0</Version>
     <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
   </PropertyGroup>
