@@ -7,7 +7,7 @@
     <Authors>Sean</Authors>
     <Company>Sean Studio</Company>
     <Description>CefSharp.WinForms</Description>
-    <Version>1.0.1</Version>
+    <Version>1.0.2</Version>
     <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
   </PropertyGroup>
 

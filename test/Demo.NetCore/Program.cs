@@ -28,13 +28,16 @@ namespace Demo.NetCore
         private static void LoadApp()
         {
             // Make sure you set performDependencyCheck false
-            ChromiumWebBrowserManager.InitializeCef(false, null, settings =>
+            if (!ChromiumWebBrowserManager.InitializeCef(false, null, settings =>
             {
                 // Set BrowserSubProcessPath based on app bitness at runtime
                 settings.BrowserSubprocessPath = Path.Combine(AppDomain.CurrentDomain.SetupInformation.ApplicationBase,
                     Environment.Is64BitProcess ? "x64" : "x86",
                     "CefSharp.BrowserSubprocess.exe");
-            });
+            }))
+            {
+                MessageBox.Show("CEF≥ı ºªØ ß∞‹£°");
+            }
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();

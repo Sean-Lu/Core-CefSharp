@@ -13,16 +13,16 @@ namespace Sean.Core.CefSharp
         /// Initialize cef with the provided settings.
         /// </summary>
         /// <param name="settingsAction"></param>
-        public static void InitializeCef(Action<CefSettings> settingsAction = null)
+        public static bool InitializeCef(Action<CefSettings> settingsAction = null)
         {
             if (Cef.IsInitialized)
             {
-                return;
+                return true;
             }
 
             var settings = new CefSettings();
             settingsAction?.Invoke(settings);
-            Cef.Initialize(settings);
+            return Cef.Initialize(settings);
         }
 
         /// <summary>
@@ -31,16 +31,16 @@ namespace Sean.Core.CefSharp
         /// <param name="performDependencyCheck"></param>
         /// <param name="browserProcessHandler"></param>
         /// <param name="settingsAction"></param>
-        public static void InitializeCef(bool performDependencyCheck, IBrowserProcessHandler browserProcessHandler, Action<CefSettings> settingsAction = null)
+        public static bool InitializeCef(bool performDependencyCheck, IBrowserProcessHandler browserProcessHandler, Action<CefSettings> settingsAction = null)
         {
             if (Cef.IsInitialized)
             {
-                return;
+                return true;
             }
 
             var settings = new CefSettings();
             settingsAction?.Invoke(settings);
-            Cef.Initialize(settings, performDependencyCheck, browserProcessHandler);
+            return Cef.Initialize(settings, performDependencyCheck, browserProcessHandler);
         }
 
         /// <summary>
