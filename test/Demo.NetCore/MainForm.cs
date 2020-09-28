@@ -14,15 +14,17 @@ namespace Demo.NetCore
 
             this.FormClosing += MainForm_FormClosing;
 
-            DefaultDownLoadHandler.OnDownloadComplete += (chromiumWebBrowser, downloadItem) =>
-            {
-                MessageBox.Show("下载完成！", "提示");
-            };
-
             _webBrowser = ChromiumWebBrowserManager.InitializeChromium(panel1, options =>
             {
                 options.Url = "http://sean.tools.com/";
                 //options.DisableContextMenu = true;
+                options.DownloadHandler = new DefaultDownLoadHandler
+                {
+                    OnDownloadComplete = (chromiumWebBrowser, downloadItem) =>
+                    {
+                        MessageBox.Show("下载完成！", "提示");
+                    }
+                };
             });
         }
 

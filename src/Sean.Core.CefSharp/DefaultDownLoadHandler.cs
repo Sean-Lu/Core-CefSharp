@@ -8,12 +8,8 @@ namespace Sean.Core.CefSharp
     /// </summary>
     public class DefaultDownLoadHandler : IDownloadHandler
     {
-#if NET40
-        public static Action<IWebBrowser, DownloadItem> OnDownloadComplete;
-
-#else
-        public static event EventHandler<DownloadItem> OnDownloadComplete;
-#endif
+        //public event EventHandler<DownloadItem> OnDownloadComplete;
+        public Action<IWebBrowser, DownloadItem> OnDownloadComplete;
 
         public void OnBeforeDownload(IWebBrowser chromiumWebBrowser, IBrowser browser, DownloadItem downloadItem, IBeforeDownloadCallback callback)
         {

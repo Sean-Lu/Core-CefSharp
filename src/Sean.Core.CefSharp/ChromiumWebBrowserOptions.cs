@@ -4,6 +4,9 @@ namespace Sean.Core.CefSharp
 {
     public class ChromiumWebBrowserOptions
     {
+        /// <summary>
+        /// 默认地址
+        /// </summary>
         public string Url { get; set; }
 
         /// <summary>
