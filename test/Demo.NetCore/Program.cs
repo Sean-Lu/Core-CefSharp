@@ -37,6 +37,7 @@ namespace Demo.NetCore
             }))
             {
                 MessageBox.Show("CEF≥ı ºªØ ß∞‹£°");
+                return;
             }
 
             Application.SetHighDpiMode(HighDpiMode.SystemAware);

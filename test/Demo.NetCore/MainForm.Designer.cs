@@ -29,8 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnTest = new System.Windows.Forms.Button();
+            this.btnGoto = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
@@ -44,25 +44,25 @@
             this.panel1.Size = new System.Drawing.Size(1049, 603);
             this.panel1.TabIndex = 0;
             // 
-            // button1
+            // btnTest
             // 
-            this.button1.Location = new System.Drawing.Point(591, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "test";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnTest.Location = new System.Drawing.Point(591, 12);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 23);
+            this.btnTest.TabIndex = 1;
+            this.btnTest.Text = "test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
-            // button2
+            // btnGoto
             // 
-            this.button2.Location = new System.Drawing.Point(510, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "跳转";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnGoto.Location = new System.Drawing.Point(510, 12);
+            this.btnGoto.Name = "btnGoto";
+            this.btnGoto.Size = new System.Drawing.Size(75, 23);
+            this.btnGoto.TabIndex = 2;
+            this.btnGoto.Text = "跳转";
+            this.btnGoto.UseVisualStyleBackColor = true;
+            this.btnGoto.Click += new System.EventHandler(this.btnGoto_Click);
             // 
             // textBox1
             // 
@@ -78,8 +78,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1073, 667);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGoto);
+            this.Controls.Add(this.btnTest);
             this.Controls.Add(this.panel1);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -92,8 +92,8 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnTest;
+        private System.Windows.Forms.Button btnGoto;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
