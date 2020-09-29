@@ -35,14 +35,14 @@ namespace Demo.NetCore
             }, browser =>
             {
                 #region How do you expose a .NET class to JavaScript?
-                //browser.RegisterJsObject(nameof(JsEvent), new JsEvent(), new BindingOptions { CamelCaseJavascriptNames = false });// 这是cefsharp老版本支持的写法，最新版本已不支持（运行时会抛出异常）
-
                 // https://github.com/cefsharp/CefSharp/issues/2990
                 // https://github.com/cefsharp/CefSharp/wiki/General-Usage#3-how-do-you-expose-a-net-class-to-javascript
 
                 // 只需要全局设置1次即可，建议放到初始化CEF的时候调用
                 CefSharpSettings.LegacyJavascriptBindingEnabled = true;
-                //CefSharpSettings.WcfEnabled = true;// 当isAsync= false的时候才需要设置
+                //CefSharpSettings.WcfEnabled = true;// 当isAsync=false的时候才需要设置
+
+                //browser.RegisterJsObject(nameof(JsEvent), new JsEvent(), new BindingOptions { CamelCaseJavascriptNames = false });// 这是cefsharp老版本支持的写法，最新版本已不支持（运行时会抛出异常）
 
                 browser.JavascriptObjectRepository.Register(nameof(JsEvent), new JsEvent(), isAsync: true, options: new BindingOptions { CamelCaseJavascriptNames = false });
 
