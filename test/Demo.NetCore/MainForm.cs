@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Windows.Forms;
 using CefSharp;
 using CefSharp.Internals;
@@ -19,7 +20,8 @@ namespace Demo.NetCore
 
             _webBrowser = ChromiumWebBrowserManager.InitializeChromium(panel1, options =>
             {
-                options.Url = "http://sean.tools.com/";
+                options.Url = $"file:///{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Test.html") }";
+                //options.Url = "http://sean.tools.com/";
                 //options.DisableContextMenu = true;
                 options.DownloadHandler = new DefaultDownLoadHandler
                 {
@@ -45,9 +47,6 @@ namespace Demo.NetCore
                 //browser.RegisterJsObject(nameof(JsEvent), new JsEvent(), new BindingOptions { CamelCaseJavascriptNames = false });// 这是cefsharp老版本支持的写法，最新版本已不支持（运行时会抛出异常）
 
                 browser.JavascriptObjectRepository.Register(nameof(JsEvent), new JsEvent(), isAsync: true, options: new BindingOptions { CamelCaseJavascriptNames = false });
-
-                // js code:
-                // JsEvent.ShowMsg();
                 #endregion
             });
         }

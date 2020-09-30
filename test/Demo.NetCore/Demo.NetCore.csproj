@@ -16,4 +16,10 @@
     <ProjectReference Include="..\..\src\Sean.Core.CefSharp\Sean.Core.CefSharp.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Test.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

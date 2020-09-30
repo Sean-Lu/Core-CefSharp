@@ -4,11 +4,11 @@ namespace Demo.NetCore
 {
     public class JsEvent
     {
-        public string Message { get; set; }
+        public string Tips { get; set; } = "提示";
 
-        public void ShowMsg()
+        public void ShowMsg(string msg)
         {
-            MessageBox.Show($"This result is from C#：\r\n{Message}");
+            MessageBox.Show($"This result is from C#：\r\n{msg}", $"【{Tips}】");
         }
     }
 }

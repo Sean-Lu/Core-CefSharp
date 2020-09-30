@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>测试页面</title>
+    <script type="text/javascript">
+        function test(msg) {
+            try {
+                /*js调用CefSharp注册的C#对象*/
+                JsEvent.ShowMsg(msg);
+            } catch (e) {
+                alert(e.message);
+            }
+        };
+    </script>
+</head>
+<body>
+    <input id="btnTest" type="button" value="测试" onclick="test('123...')" />
+</body>
+</html>
