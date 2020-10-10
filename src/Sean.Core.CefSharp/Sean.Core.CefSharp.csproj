@@ -9,6 +9,7 @@
     <Description>CefSharp.WinForms</Description>
     <Version>1.0.3</Version>
     <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
+    <PackageProjectUrl>https://github.com/Sean-Lu/Core-CefSharp.git</PackageProjectUrl>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
