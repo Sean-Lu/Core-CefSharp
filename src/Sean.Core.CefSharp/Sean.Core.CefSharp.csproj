@@ -15,6 +15,7 @@
   <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
     <Reference Include="System.Windows.Forms" />
     <PackageReference Include="CefSharp.Net40.WinForms" Version="69.0.2" />
+    <!--<PackageReference Include="CefSharp.WinForms" Version="49.0.1" />-->
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net452'">
