@@ -25,6 +25,7 @@ namespace Sean.Core.CefSharp
             return Cef.Initialize(settings);
         }
 
+#if !NET40
         /// <summary>
         /// Initialize cef with the provided settings.
         /// </summary>
@@ -42,6 +43,7 @@ namespace Sean.Core.CefSharp
             settingsAction?.Invoke(settings);
             return Cef.Initialize(settings, performDependencyCheck, browserProcessHandler);
         }
+#endif
 
         /// <summary>
         /// Create a browser component, then add it to the control and fill it to the control.
@@ -77,6 +79,7 @@ namespace Sean.Core.CefSharp
             Cef.Shutdown();
         }
 
+#if !NET40
         /// <summary>
         /// Shut down cef.
         /// </summary>
@@ -84,5 +87,6 @@ namespace Sean.Core.CefSharp
         {
             Cef.ShutdownWithoutChecks();
         }
+#endif
     }
 }

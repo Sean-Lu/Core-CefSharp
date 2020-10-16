@@ -1,21 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net40;net452;netcoreapp3.0</TargetFrameworks>
+    <TargetFrameworks>net40</TargetFrameworks>
     <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Authors>Sean</Authors>
     <Copyright>Copyright © 2020 Sean</Copyright>
     <Description>CefSharp.WinForms</Description>
-    <Version>1.0.3</Version>
+    <Version>1.0.3-beta</Version>
     <CefSharpAnyCpuSupport>true</CefSharpAnyCpuSupport>
     <PackageProjectUrl>https://github.com/Sean-Lu/Core-CefSharp.git</PackageProjectUrl>
+    <PackageId>Sean.Core.CefSharp.Net40_x86</PackageId>
+    <Platforms>AnyCPU;x86</Platforms>
   </PropertyGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net40'">
     <Reference Include="System.Windows.Forms" />
-    <PackageReference Include="CefSharp.Net40.WinForms" Version="69.0.2" />
-    <!--<PackageReference Include="CefSharp.WinForms" Version="49.0.1" />-->
+    <!--<PackageReference Include="CefSharp.Net40.WinForms" Version="69.0.2" />-->
+    <PackageReference Include="CefSharp.WinForms" Version="49.0.1" />
   </ItemGroup>
 
   <ItemGroup Condition="'$(TargetFramework)' == 'net452'">
