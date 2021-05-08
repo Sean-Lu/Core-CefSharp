@@ -9,6 +9,12 @@
 - 如果要屏蔽右键菜单，使用`DisableMenuHandler`即可
 - 支持与js交互，具体用法见demo（不同版本的`CefSharp.WinForms`写法会不一样）
 
+## Packages
+
+| Package | NuGet Stable | NuGet Pre-release | Downloads |
+| ------- | ------------ | ----------------- | --------- |
+| [Sean.Core.CefSharp](https://www.nuget.org/packages/Sean.Core.CefSharp/) | [![Sean.Core.CefSharp](https://img.shields.io/nuget/v/Sean.Core.CefSharp.svg)](https://www.nuget.org/packages/Sean.Core.CefSharp/) | [![Sean.Core.CefSharp](https://img.shields.io/nuget/vpre/Sean.Core.CefSharp.svg)](https://www.nuget.org/packages/Sean.Core.CefSharp/) | [![Sean.Core.CefSharp](https://img.shields.io/nuget/dt/Sean.Core.CefSharp.svg)](https://www.nuget.org/packages/Sean.Core.CefSharp/) |
+
 ## Nuget包引用
 
 > **Id：Sean.Core.CefSharp**
